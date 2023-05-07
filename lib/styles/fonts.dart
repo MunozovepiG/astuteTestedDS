@@ -33,7 +33,7 @@ class BTM16 extends StatelessWidget {
         style: GoogleFonts.montserrat(
           fontSize: 16,
           fontWeight: FontWeight.bold,
-          color: color,
+          color: color ?? Colors.black,
         ));
   }
 }
@@ -49,7 +49,8 @@ class BTM36 extends StatelessWidget {
     return AutoSizeText(title,
         maxLines: maxLines,
         textAlign: TextAlign.center,
-        style: GoogleFonts.yesevaOne(fontSize: 36, color: color));
+        style:
+            GoogleFonts.yesevaOne(fontSize: 36, color: color ?? Colors.black));
   }
 }
 
@@ -66,7 +67,9 @@ class SH25 extends StatelessWidget {
     return AutoSizeText(title,
         maxLines: maxLines,
         style: GoogleFonts.montserrat(
-            fontSize: 25, fontWeight: FontWeight.bold, color: color));
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+            color: color ?? Colors.black));
   }
 }
 
@@ -81,7 +84,9 @@ class SH18 extends StatelessWidget {
     return AutoSizeText(title,
         maxLines: maxLines,
         style: GoogleFonts.montserrat(
-            fontSize: 18, fontWeight: FontWeight.bold, color: color));
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+            color: color ?? Colors.black));
   }
 }
 
@@ -96,7 +101,9 @@ class SH12 extends StatelessWidget {
     return AutoSizeText(title,
         maxLines: maxLines,
         style: GoogleFonts.montserrat(
-            fontSize: 12, fontWeight: FontWeight.bold, color: color));
+            fontSize: 12,
+            fontWeight: FontWeight.bold,
+            color: color ?? Colors.black));
   }
 }
 
@@ -113,7 +120,9 @@ class BBLM14 extends StatelessWidget {
     return AutoSizeText(title,
         maxLines: maxLines,
         style: GoogleFonts.montserrat(
-            fontSize: 14, fontWeight: FontWeight.bold, color: color));
+            fontSize: 14,
+            fontWeight: FontWeight.bold,
+            color: color ?? Colors.black));
   }
 }
 
@@ -127,7 +136,8 @@ class BBRM14 extends StatelessWidget {
   Widget build(BuildContext context) {
     return AutoSizeText(title,
         maxLines: maxLines,
-        style: GoogleFonts.montserrat(fontSize: 14, color: color));
+        style:
+            GoogleFonts.montserrat(fontSize: 14, color: color ?? Colors.black));
   }
 }
 
@@ -141,7 +151,8 @@ class BBRS12 extends StatelessWidget {
   Widget build(BuildContext context) {
     return AutoSizeText(title,
         maxLines: maxLines,
-        style: GoogleFonts.montserrat(fontSize: 12, color: color));
+        style:
+            GoogleFonts.montserrat(fontSize: 12, color: color ?? Colors.black));
   }
 }
 
@@ -156,7 +167,9 @@ class BB10 extends StatelessWidget {
     return AutoSizeText(title,
         maxLines: maxLines,
         style: GoogleFonts.montserrat(
-            fontSize: 10, fontWeight: FontWeight.bold, color: color));
+            fontSize: 10,
+            fontWeight: FontWeight.bold,
+            color: color ?? Colors.black));
   }
 }
 
@@ -170,7 +183,8 @@ class BR10 extends StatelessWidget {
   Widget build(BuildContext context) {
     return AutoSizeText(title,
         maxLines: maxLines,
-        style: GoogleFonts.montserrat(fontSize: 10, color: color));
+        style:
+            GoogleFonts.montserrat(fontSize: 10, color: color ?? Colors.black));
   }
 }
 
@@ -187,7 +201,9 @@ class TB8 extends StatelessWidget {
     return AutoSizeText(title,
         maxLines: maxLines,
         style: GoogleFonts.montserrat(
-            fontSize: 8, fontWeight: FontWeight.bold, color: color));
+            fontSize: 8,
+            fontWeight: FontWeight.bold,
+            color: color ?? Colors.black));
   }
 }
 
@@ -201,10 +217,14 @@ class TBM14 extends StatelessWidget {
   Widget build(BuildContext context) {
     return AutoSizeText(title,
         maxLines: maxLines,
-        style: GoogleFonts.montserrat(
-            fontSize: 14, fontWeight: FontWeight.w500, color: color));
+        style: GoogleFonts.roboto(
+            fontSize: 14,
+            fontWeight: FontWeight.w600,
+            color: color ?? Colors.black));
   }
 }
+
+//text + icon font
 
 //Lable fonts
 
@@ -218,7 +238,7 @@ class ILM12 extends StatelessWidget {
   Widget build(BuildContext context) {
     return AutoSizeText(title,
         maxLines: maxLines,
-        style: GoogleFonts.roboto(fontSize: 12, color: color));
+        style: GoogleFonts.roboto(fontSize: 12, color: color ?? Colors.black));
   }
 }
 
@@ -234,7 +254,7 @@ class PLS10 extends StatelessWidget {
         maxLines: maxLines,
         style: GoogleFonts.roboto(
           fontSize: 10,
-          color: color,
+          color: color ?? Colors.black,
           fontWeight: FontWeight.w500,
         ));
   }
