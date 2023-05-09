@@ -4,6 +4,7 @@ import 'package:my_t_components/page/page2.dart';
 import 'package:my_t_components/styles/buttons.dart';
 import 'package:my_t_components/styles/components.dart';
 import 'package:my_t_components/styles/fonts.dart';
+import 'package:my_t_components/styles/pop-up.dart';
 import 'package:my_t_components/styles/textformfields.dart';
 import 'package:my_t_components/styles/theme.dart';
 
@@ -115,8 +116,20 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
 
             NeonActiveButton('Save', () {
-              print(valueExtract);
-            })
+              showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return LargeAlertBox(
+                    positiveText: 'Yes',
+                    negativeText: 'No',
+                    title: 'Title of the Dialog',
+                    message2: 'basic',
+                    message1:
+                        'This is the message of the dialog.This is the message of the dialog.This is the message of the dialog.This is the message of the dialog.',
+                  );
+                },
+              );
+            }),
           ],
         ),
       ),

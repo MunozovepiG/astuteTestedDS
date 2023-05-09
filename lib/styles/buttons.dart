@@ -99,3 +99,26 @@ class IconTextButton extends StatelessWidget {
     );
   }
 }
+
+//Plain tex button
+
+class PlainTextButton extends StatelessWidget {
+  final Color color;
+  final String text;
+  final VoidCallback onPressed;
+  final Color textColor;
+
+  PlainTextButton(
+      {required this.color,
+      required this.text,
+      required this.onPressed,
+      required this.textColor});
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(
+      onPressed: onPressed,
+      child: BB10(text, textColor, 1),
+    );
+  }
+}
