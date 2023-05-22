@@ -4,18 +4,16 @@ class StandardTopSpace extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 148,
+      height: MediaQuery.of(context).size.height * 0.152,
     );
   }
 }
 
-class SmallTopSpace extends StatelessWidget {
-  const SmallTopSpace({super.key});
-
+class SS36 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 35,
+      height: 36,
     );
   }
 }

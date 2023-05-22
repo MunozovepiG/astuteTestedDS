@@ -6,8 +6,10 @@ import 'package:my_t_components/styles/components.dart';
 import 'package:my_t_components/styles/fonts.dart';
 import 'package:my_t_components/styles/pop-up.dart';
 import 'package:my_t_components/styles/selections.dart';
+import 'package:my_t_components/styles/spaces.dart';
 import 'package:my_t_components/styles/textformfields.dart';
 import 'package:my_t_components/styles/theme.dart';
+import 'package:my_t_components/styles/tracker.dart';
 
 void main() {
   runApp(const MyApp());
@@ -64,11 +66,6 @@ class _MyHomePageState extends State<MyHomePage> {
     String? valueExtract;
     final TextEditingController _emailController = TextEditingController();
     return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
@@ -90,6 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
             // horizontal).
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              CBButton(),
               BBRS12(
                   'Just testing one of the fonts will have to test all of the fonts',
                   Colors.black,
@@ -165,6 +163,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   print('Selected value: $value');
                 },
               ),
+
+              //the tracker
+
+              S4trackerIC(),
+              SS16(),
+              S4trackerC(),
             ],
           ),
         ),

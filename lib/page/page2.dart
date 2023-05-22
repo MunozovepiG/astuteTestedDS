@@ -3,6 +3,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:my_t_components/styles/buttons.dart';
 import 'package:my_t_components/styles/fonts.dart';
+import 'package:my_t_components/styles/headings.dart';
+import 'package:my_t_components/styles/theme.dart';
 
 class Page2 extends StatelessWidget {
   const Page2({super.key});
@@ -13,14 +15,16 @@ class Page2 extends StatelessWidget {
       body: SafeArea(
         child: Container(
             height: MediaQuery.of(context).size.height * 100,
-            color: Colors.amber,
+            color: Colors.white,
             child: Center(
                 child: Column(
               children: [
-                Text('Whatever page 2'),
-                BTM16('The shy and plain', Colors.black, 1),
-                DisabledRoundButton('Test', () {
-                  Navigator.pushNamed(context, '/page1');
+                Container(
+                    width: MediaQuery.of(context).size.width * 0.9,
+                    child: TrackingHeading(AppTheme.colors.lavender750,
+                        'Example 1', 'description')),
+                SmallView(Icons.arrow_forward_outlined, 'clickhere', () {
+                  Navigator.pushNamed(context, '/page2');
                 })
               ],
             ))),

@@ -100,7 +100,7 @@ class IconTextButton extends StatelessWidget {
   }
 }
 
-//Plain tex button
+//Plain text button
 
 class PlainTextButton extends StatelessWidget {
   final Color color;
@@ -120,5 +120,81 @@ class PlainTextButton extends StatelessWidget {
       onPressed: onPressed,
       child: BB10(text, textColor, 1),
     );
+  }
+}
+
+//back button
+
+class CBButton extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      child: Row(
+        children: [
+          Icon(
+            Icons.arrow_back,
+            size: 14,
+          ),
+          SizedBox(
+            width: 4,
+          ),
+          PLS10('Back', Colors.black, 1)
+        ],
+      ),
+      onTap: () => Navigator.of(context).pop(),
+    );
+  }
+}
+
+//Plain tex button
+
+class BasicPlainTextButton extends StatelessWidget {
+  final Color color;
+  final String text;
+  final VoidCallback onPressed;
+  final Color textColor;
+
+  BasicPlainTextButton(
+      {required this.color,
+      required this.text,
+      required this.onPressed,
+      required this.textColor});
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(
+      onPressed: onPressed,
+      child: TBM14(text, textColor, 1),
+    );
+  }
+}
+
+//small view icon and text button
+class SmallView extends StatelessWidget {
+  final IconData icon;
+  final String buttonText;
+
+  SmallView(this.icon, this.buttonText);
+  @override
+  Widget build(BuildContext context) {
+    return TextButton.icon(
+        icon: Container(
+          width: 17,
+          height: 17,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle, // Specify the circular shape
+            color: AppTheme.colors
+                .green300, // Set the desired background color of the circle container
+          ),
+          child: Center(
+            child: Icon(
+              icon,
+              size: 13,
+              color: AppTheme.colors.green800,
+            ),
+          ),
+        ),
+        onPressed: () {},
+        label: BBBS12(buttonText, Colors.black, 1));
   }
 }
