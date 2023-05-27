@@ -71,104 +71,55 @@ class _MyHomePageState extends State<MyHomePage> {
         // in the middle of the parent.
         child: SingleChildScrollView(
           child: Column(
-            // Column is also a layout widget. It takes a list of children and
-            // arranges them vertically. By default, it sizes itself to fit its
-            // children horizontally, and tries to be as tall as its parent.
-            //
-            // Invoke "debug painting" (press "p" in the console, choose the
-            // "Toggle Debug Paint" action from the Flutter Inspector in Android
-            // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-            // to see the wireframe for each widget.
-            //
-            // Column has various properties to control how it sizes itself and
-            // how it positions its children. Here we use mainAxisAlignment to
-            // center the children vertically; the main axis here is the vertical
-            // axis because Columns are vertical (the cross axis would be
-            // horizontal).
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              CBButton(),
-              BBRS12(
-                  'Just testing one of the fonts will have to test all of the fonts',
-                  Colors.black,
-                  1),
-              BTM36(
-                  'Just testing one of the fonts will have to test all of the fonts',
-                  Colors.black,
-                  1),
-              MediumMainButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/page2');
-                  },
-                  text: 'Page 2'),
-              SizedBox(
-                height: 24,
-              ),
-              CustomDatePicker(
-                primaryColor: Colors.black,
-                iconColor: AppTheme.colors.green800,
-                colorscheme:
-                    ColorScheme.light(primary: AppTheme.colors.lavender500),
-                onDateSelected: (date) {
-                  print(date);
-                },
-              ),
-
-              //text form field
-
-              MyCustomTextField(
-                inputLabelText: 'Please provide your email',
-                controller: _emailController,
-                backgroundColor: AppTheme.colors.blue200,
-                hintText: 'Email address',
-                labelText: 'Email',
-                onChanged: (value) {
-                  valueExtract = value;
-                },
-              ),
-
-              NeonActiveButton('Save', () {
-                showDialog(
-                  context: context,
-                  builder: (BuildContext context) {
-                    return LargeAlertBox(
-                      positiveText: 'Yes',
-                      negativeText: 'No',
-                      title: 'Title of the Dialog',
-                      message2: 'basic',
-                      message1:
-                          'This is the message of the dialog.This is the message of the dialog.This is the message of the dialog.This is the message of the dialog.',
-                    );
-                  },
-                );
-              }),
-
-              //the radio buttons
-
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
               Container(
-                width: MediaQuery.of(context).size.width * 0.50,
-                child: RadioButtons(
-                    options: ['options 1', 'option2', 'option3'],
-                    buttonColor: Colors.red,
-                    onChanged: _handleRadioValueChanged),
+                width: MediaQuery.of(context).size.width * 0.90,
+                child: Column(
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      // Column is also a layout widget. It takes a list of children and
+                      // arranges them vertically. By default, it sizes itself to fit its
+                      // children horizontally, and tries to be as tall as its parent.
+                      //
+                      // Invoke "debug painting" (press "p" in the console, choose the
+                      // "Toggle Debug Paint" action from the Flutter Inspector in Android
+                      // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
+                      // to see the wireframe for each widget.
+                      //
+                      // Column has various properties to control how it sizes itself and
+                      // how it positions its children. Here we use mainAxisAlignment to
+                      // center the children vertically; the main axis here is the vertical
+                      // axis because Columns are vertical (the cross axis would be
+                      // horizontal).
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        CBButton(),
+                        TextButton(
+                          onPressed: () {
+                            showDialog(
+                                context: context,
+                                builder: (BuildContext context) {
+                                  return SmallAlertBox(
+                                    mainColor: AppTheme.colors.blue500,
+                                    title: 'Small Alert Box',
+                                    message1: 'Message 1',
+                                    message2: '',
+                                    positiveText: 'Yes',
+                                    negativeText: 'Cancel',
+                                    positiveAction: () {},
+                                    negativeAction: () {},
+                                  );
+                                });
+                          },
+                          child: Text('Click here'),
+                        )
+                      ],
+                    ),
+                  ],
+                ),
               ),
-
-              //the dropdown
-              MyDropdown(
-                iconColor: AppTheme.colors.orange500,
-                borderColor: Colors.lightGreen,
-                values: ['Option 1', 'Option 2', 'Option 3'],
-                preselectedValue: 'Option 2',
-                onChanged: (value) {
-                  print('Selected value: $value');
-                },
-              ),
-
-              //the tracker
-
-              S4trackerIC(),
-              SS16(),
-              S4trackerC(),
             ],
           ),
         ),

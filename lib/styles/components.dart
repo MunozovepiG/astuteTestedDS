@@ -1,6 +1,8 @@
 import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
 import 'package:my_t_components/styles/buttons.dart';
+import 'package:my_t_components/styles/fonts.dart';
+import 'package:my_t_components/styles/spaces.dart';
 import 'package:my_t_components/styles/theme.dart';
 
 //calendar
@@ -10,17 +12,19 @@ class CustomDatePicker extends StatefulWidget {
   final ValueChanged<String>? onDateSelected;
   final ColorScheme colorscheme;
   final Color iconColor;
+  final String labelText;
   //final Color calendarColor;
 
   //final ValueChanged<DateTime> onChanged;
 
-  CustomDatePicker({
-    required this.primaryColor,
-    required this.onDateSelected,
-    required this.colorscheme,
-    required this.iconColor,
-    //required this.calendarColor,
-  });
+  CustomDatePicker(
+      {required this.primaryColor,
+      required this.onDateSelected,
+      required this.colorscheme,
+      required this.iconColor,
+      required this.labelText
+      //required this.calendarColor,
+      });
 
   @override
   State<CustomDatePicker> createState() => _CustomDatePickerState();
@@ -33,12 +37,18 @@ class _CustomDatePickerState extends State<CustomDatePicker> {
 
   @override
   Widget build(BuildContext context) {
-    return IconTextButton(
-        icon: Icons.calendar_month_outlined,
-        color: widget.iconColor,
-        text: formattedDate,
-        onPressed: () => _selectDate(context),
-        textColor: Colors.black);
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        ILM12(widget.labelText, AppTheme.colors.grey800, 1),
+        IconTextButton(
+            icon: Icons.calendar_month_outlined,
+            color: widget.iconColor,
+            text: formattedDate,
+            onPressed: () => _selectDate(context),
+            textColor: Colors.black),
+      ],
+    );
   }
 
   Future<void> _selectDate(BuildContext context) async {

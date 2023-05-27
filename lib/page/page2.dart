@@ -18,13 +18,10 @@ class Page2 extends StatelessWidget {
             color: Colors.white,
             child: Center(
                 child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                    width: MediaQuery.of(context).size.width * 0.9,
-                    child: TrackingHeading(AppTheme.colors.lavender750,
-                        'Example 1', 'description')),
-                SmallView(Icons.arrow_forward_outlined, 'clickhere', () {
-                  Navigator.pushNamed(context, '/page2');
+                ArrowIButton(() {
+                  Navigator.pushNamed(context, '/');
                 })
               ],
             ))),

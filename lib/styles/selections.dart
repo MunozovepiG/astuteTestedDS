@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:my_t_components/styles/components.dart';
 import 'package:my_t_components/styles/fonts.dart';
 import 'package:my_t_components/styles/spaces.dart';
 import 'package:my_t_components/styles/theme.dart';
@@ -10,11 +11,13 @@ class RadioButtons extends StatefulWidget {
   final List<String> options;
   final Color buttonColor;
   final Function(String) onChanged;
+  final String labelText;
 
   RadioButtons({
     required this.options,
     required this.buttonColor,
     required this.onChanged,
+    required this.labelText,
   });
 
   @override
@@ -27,28 +30,34 @@ class _RadioButtonsState extends State<RadioButtons> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: widget.options
-          .map(
-            (option) => RadioListTile(
-              title: Padding(
-                padding: const EdgeInsets.only(left: 0.0),
-                child: Text(option,
-                    style: GoogleFonts.montserrat(
-                        fontSize: 14, color: Colors.black)),
-              ),
-              value: option,
-              groupValue: _selectedOption,
-              onChanged: (value) {
-                setState(() {
-                  _selectedOption = value.toString();
-                  widget.onChanged(_selectedOption);
-                });
-              },
-              activeColor: widget.buttonColor,
-              contentPadding: EdgeInsets.symmetric(horizontal: 0.0),
-            ),
-          )
-          .toList(),
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        ILM12(widget.labelText, AppTheme.colors.grey800, 1),
+        Column(
+          children: widget.options
+              .map(
+                (option) => RadioListTile(
+                  title: Padding(
+                    padding: const EdgeInsets.only(left: 0.0),
+                    child: Text(option,
+                        style: GoogleFonts.montserrat(
+                            fontSize: 14, color: Colors.black)),
+                  ),
+                  value: option,
+                  groupValue: _selectedOption,
+                  onChanged: (value) {
+                    setState(() {
+                      _selectedOption = value.toString();
+                      widget.onChanged(_selectedOption);
+                    });
+                  },
+                  activeColor: widget.buttonColor,
+                  contentPadding: EdgeInsets.symmetric(horizontal: 0.0),
+                ),
+              )
+              .toList(),
+        ),
+      ],
     );
   }
 }
@@ -128,3 +137,5 @@ class _MyDropdownState extends State<MyDropdown> {
     );
   }
 }
+
+//calendar button and label

@@ -173,8 +173,9 @@ class BasicPlainTextButton extends StatelessWidget {
 class SmallView extends StatelessWidget {
   final IconData icon;
   final String buttonText;
+  final VoidCallback onPressed;
 
-  SmallView(this.icon, this.buttonText);
+  SmallView(this.icon, this.buttonText, this.onPressed);
   @override
   Widget build(BuildContext context) {
     return TextButton.icon(
@@ -194,7 +195,35 @@ class SmallView extends StatelessWidget {
             ),
           ),
         ),
-        onPressed: () {},
+        onPressed: onPressed,
         label: BBBS12(buttonText, Colors.black, 1));
+  }
+}
+
+//neon icon button
+//example use case to view more on the cards
+class ArrowIButton extends StatelessWidget {
+  final VoidCallback onPressed;
+
+  ArrowIButton(this.onPressed);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        width: 20,
+        height: 20,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle, // Specify the circular shape
+          color: AppTheme.colors
+              .green300, // Set the desired background color of the circle container
+        ),
+        child: InkWell(
+          child: Center(
+              child: Icon(
+            Icons.arrow_forward_outlined,
+            size: 14,
+          )),
+          onTap: onPressed,
+        ));
   }
 }
