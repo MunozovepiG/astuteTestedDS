@@ -96,25 +96,23 @@ class _MyHomePageState extends State<MyHomePage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         CBButton(),
-                        TextButton(
-                          onPressed: () {
-                            showDialog(
-                                context: context,
-                                builder: (BuildContext context) {
-                                  return SmallAlertBox(
-                                    mainColor: AppTheme.colors.blue500,
-                                    title: 'Small Alert Box',
-                                    message1: 'Message 1',
-                                    message2: '',
-                                    positiveText: 'Yes',
-                                    negativeText: 'Cancel',
-                                    positiveAction: () {},
-                                    negativeAction: () {},
-                                  );
-                                });
+                        //the text input fields
+
+                        MS32(),
+
+                        LongTextField(
+                          keyboardType: TextInputType.multiline,
+                          inputFormatters: [],
+                          obscureText: false,
+                          inputLabelText: 'Please provide your email',
+                          controller: _emailController,
+                          backgroundColor: AppTheme.colors.blue200,
+                          hintText: 'Email address',
+                          labelText: 'Email',
+                          onChanged: (value) {
+                            valueExtract = value;
                           },
-                          child: Text('Click here'),
-                        )
+                        ),
                       ],
                     ),
                   ],
