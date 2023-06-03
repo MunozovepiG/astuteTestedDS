@@ -13,6 +13,10 @@ class CustomDatePicker extends StatefulWidget {
   final ColorScheme colorscheme;
   final Color iconColor;
   final String labelText;
+
+  DateTime minDate;
+  DateTime maxDate;
+  DateTime intialDate;
   //final Color calendarColor;
 
   //final ValueChanged<DateTime> onChanged;
@@ -22,7 +26,10 @@ class CustomDatePicker extends StatefulWidget {
       required this.onDateSelected,
       required this.colorscheme,
       required this.iconColor,
-      required this.labelText
+      required this.labelText,
+      required this.minDate,
+      required this.maxDate,
+      required this.intialDate
       //required this.calendarColor,
       });
 
@@ -52,15 +59,22 @@ class _CustomDatePickerState extends State<CustomDatePicker> {
   }
 
   Future<void> _selectDate(BuildContext context) async {
-    final DateTime currentDate = DateTime.now();
-    final DateTime sixteenYearsAgo =
-        currentDate.subtract(const Duration(days: 16 * 365));
+    DateTime currentDate = DateTime.now();
+    DateTime minDate =
+        currentDate.subtract(const Duration(days: 90 * 365)); // 90 years ago
+    DateTime maxDate =
+        currentDate.subtract(const Duration(days: 14 * 365)); // 14 years ago
+
+    DateTime initialDate = maxDate;
+    if (currentDate.isBefore(maxDate)) {
+      initialDate = currentDate;
+    }
 
     final DateTime? pickedDate = await showDatePicker(
         context: context,
-        initialDate: DateTime.now(),
-        firstDate: DateTime.now(),
-        lastDate: DateTime(2101),
+        initialDate: widget.intialDate,
+        firstDate: widget.minDate,
+        lastDate: currentDate,
         //neeed to review the calendar color how to make it dynamic
         builder: (context, child) {
           return Theme(

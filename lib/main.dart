@@ -64,6 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     bool test = false;
     String? valueExtract;
+    final DateTime currentDate = DateTime.now();
     final TextEditingController _emailController = TextEditingController();
     return Scaffold(
       body: Center(
@@ -111,6 +112,24 @@ class _MyHomePageState extends State<MyHomePage> {
                           labelText: 'Email',
                           onChanged: (value) {
                             valueExtract = value;
+                          },
+                        ),
+
+                        LS72(),
+                        CustomDatePicker(
+                          intialDate: currentDate
+                              .subtract(const Duration(days: 5 * 365)),
+                          maxDate: currentDate
+                              .subtract(const Duration(days: 5 * 365)),
+                          minDate: currentDate
+                              .subtract(const Duration(days: 20 * 365)),
+                          labelText: 'Here pick a date',
+                          primaryColor: Colors.black,
+                          iconColor: AppTheme.colors.green800,
+                          colorscheme: ColorScheme.light(
+                              primary: AppTheme.colors.lavender500),
+                          onDateSelected: (date) {
+                            print(date);
                           },
                         ),
                       ],
