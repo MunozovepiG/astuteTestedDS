@@ -13,6 +13,7 @@ class CustomDatePicker extends StatefulWidget {
   final ColorScheme colorscheme;
   final Color iconColor;
   final String labelText;
+  final CrossAxisAlignment crossAxisAlignment;
 
   DateTime minDate;
   DateTime maxDate;
@@ -29,7 +30,8 @@ class CustomDatePicker extends StatefulWidget {
       required this.labelText,
       required this.minDate,
       required this.maxDate,
-      required this.intialDate
+      required this.intialDate,
+      required this.crossAxisAlignment
       //required this.calendarColor,
       });
 
@@ -45,9 +47,9 @@ class _CustomDatePickerState extends State<CustomDatePicker> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: widget.crossAxisAlignment,
       children: [
-        ILM12(widget.labelText, AppTheme.colors.grey800, 1),
+        PLS10(widget.labelText, AppTheme.colors.grey800, 1),
         IconTextButton(
             icon: Icons.calendar_month_outlined,
             color: widget.iconColor,

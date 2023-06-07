@@ -117,6 +117,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                         LS72(),
                         CustomDatePicker(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           intialDate: currentDate
                               .subtract(const Duration(days: 5 * 365)),
                           maxDate: currentDate
