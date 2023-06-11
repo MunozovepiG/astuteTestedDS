@@ -70,13 +70,15 @@ class MyDropdown extends StatefulWidget {
   final Function(String) onChanged;
   final Color iconColor;
   final Color borderColor;
+  final String? labelText;
 
   MyDropdown(
       {required this.values,
       required this.preselectedValue,
       required this.onChanged,
       required this.iconColor,
-      required this.borderColor});
+      required this.borderColor,
+      required this.labelText});
 
   @override
   _MyDropdownState createState() => _MyDropdownState();
@@ -98,7 +100,7 @@ class _MyDropdownState extends State<MyDropdown> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          ILM12('Sample', AppTheme.colors.grey650, 1),
+          ILM12('${widget.labelText}', AppTheme.colors.grey650, 1),
           SS8(),
           Container(
             width: MediaQuery.of(context).size.width * 0.90,
@@ -138,4 +140,89 @@ class _MyDropdownState extends State<MyDropdown> {
   }
 }
 
-//calendar button and label
+//dropw down where active and deactive
+class CustomDropdown extends StatefulWidget {
+  final List<String> values;
+  final String preselectedValue;
+  final Function(String) onChanged;
+  final Color iconColor;
+  final Color borderColor;
+  final String? labelText;
+  final bool disabled; // New property
+  final Color? backgroundColor;
+
+  CustomDropdown(
+      {required this.values,
+      required this.preselectedValue,
+      required this.onChanged,
+      required this.iconColor,
+      required this.borderColor,
+      required this.labelText,
+      this.disabled = false,
+      this.backgroundColor // Default value is false
+      });
+
+  @override
+  _CustomDropdownState createState() => _CustomDropdownState();
+}
+
+class _CustomDropdownState extends State<CustomDropdown> {
+  late String _selectedValue;
+
+  @override
+  void initState() {
+    super.initState();
+    _selectedValue = widget.preselectedValue;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: MediaQuery.of(context).size.width * 0.90,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          ILM12('${widget.labelText}', AppTheme.colors.grey650, 1),
+          SS8(),
+          Container(
+            width: MediaQuery.of(context).size.width * 0.90,
+            decoration: BoxDecoration(
+              color: widget.backgroundColor,
+              borderRadius: BorderRadius.circular(10),
+              border: Border.all(color: widget.borderColor, width: 2),
+            ),
+            child: IgnorePointer(
+              ignoring: widget
+                  .disabled, // Disable interaction based on the 'disabled' property
+              child: DropdownButtonFormField<String>(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                  ),
+                ),
+                icon: Icon(Icons.arrow_drop_down, color: widget.iconColor),
+                value: _selectedValue,
+                items: widget.values
+                    .map(
+                      (value) => DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      ),
+                    )
+                    .toList(),
+                onChanged: (value) {
+                  if (value != null && value != _selectedValue) {
+                    setState(() {
+                      _selectedValue = value;
+                      widget.onChanged(_selectedValue);
+                    });
+                  }
+                },
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

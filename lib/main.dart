@@ -64,6 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     bool test = false;
     String? valueExtract;
+    String? example;
     final DateTime currentDate = DateTime.now();
     final TextEditingController _emailController = TextEditingController();
     return Scaffold(
@@ -101,38 +102,24 @@ class _MyHomePageState extends State<MyHomePage> {
 
                         MS32(),
 
-                        LongTextField(
-                          keyboardType: TextInputType.multiline,
-                          inputFormatters: [],
-                          obscureText: false,
-                          inputLabelText: 'Please provide your email',
-                          controller: _emailController,
-                          backgroundColor: AppTheme.colors.blue200,
-                          hintText: 'Email address',
-                          labelText: 'Email',
-                          onChanged: (value) {
-                            valueExtract = value;
-                          },
+                        CustomDropdown(
+                          values: ['Option 1', 'Option 2'],
+                          preselectedValue: 'Option 1',
+                          onChanged: (value) {},
+                          iconColor: AppTheme.colors.green800,
+                          borderColor: AppTheme.colors.green800,
+                          labelText: 'sample',
+                          disabled: true,
+                          backgroundColor: AppTheme.colors.grey400,
                         ),
 
-                        LS72(),
-                        CustomDatePicker(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          intialDate: currentDate
-                              .subtract(const Duration(days: 5 * 365)),
-                          maxDate: currentDate
-                              .subtract(const Duration(days: 5 * 365)),
-                          minDate: currentDate
-                              .subtract(const Duration(days: 20 * 365)),
-                          labelText: 'Here pick a date',
-                          primaryColor: Colors.black,
-                          iconColor: AppTheme.colors.green800,
-                          colorscheme: ColorScheme.light(
-                              primary: AppTheme.colors.lavender500),
-                          onDateSelected: (date) {
-                            print(date);
-                          },
-                        ),
+                        MyDropdown(
+                            values: ['Option 1', 'Option 2'],
+                            preselectedValue: 'Option 1',
+                            onChanged: (value) {},
+                            iconColor: Colors.green,
+                            borderColor: Colors.orange,
+                            labelText: 'sample')
                       ],
                     ),
                   ],

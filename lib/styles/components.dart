@@ -94,3 +94,70 @@ class _CustomDatePickerState extends State<CustomDatePicker> {
     }
   }
 }
+
+class MonthlyCalendar extends StatefulWidget {
+  final Color primaryColor;
+  final ValueChanged<String>? onDateSelected;
+  final ColorScheme colorscheme;
+  final Color iconColor;
+  final String labelText;
+  final CrossAxisAlignment crossAxisAlignment;
+
+  MonthlyCalendar({
+    required this.primaryColor,
+    required this.onDateSelected,
+    required this.colorscheme,
+    required this.crossAxisAlignment,
+    required this.iconColor,
+    required this.labelText,
+  });
+
+  @override
+  _MonthlyCalendarState createState() => _MonthlyCalendarState();
+}
+
+class _MonthlyCalendarState extends State<MonthlyCalendar> {
+  DateTime selectedDate = DateTime.now();
+  String formattedDate = 'dd/mm/yyyy';
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: widget.crossAxisAlignment,
+      children: [
+        PLS10(widget.labelText, AppTheme.colors.grey800, 1),
+        IconTextButton(
+            icon: Icons.calendar_month_outlined,
+            color: widget.iconColor,
+            text: formattedDate,
+            textColor: AppTheme.colors.black,
+            onPressed: () {
+              showDatePicker(
+                  context: context,
+                  initialDate: selectedDate,
+                  firstDate: DateTime(selectedDate.year, selectedDate.month, 1),
+                  lastDate:
+                      DateTime(selectedDate.year, selectedDate.month + 1, 0),
+                  builder: (context, child) {
+                    return Theme(
+                        data: Theme.of(context)
+                            .copyWith(colorScheme: widget.colorscheme),
+                        child: child!);
+                  }).then((pickedDate) {
+                if (pickedDate != null) {
+                  setState(() {
+                    selectedDate = pickedDate;
+                    formattedDate =
+                        DateFormat('EEE, MMM d, yyyy').format(selectedDate);
+                    print(selectedDate);
+                  });
+                  if (widget.onDateSelected != null) {
+                    widget.onDateSelected!(formattedDate);
+                  }
+                }
+              });
+            }),
+      ],
+    );
+  }
+}
