@@ -91,17 +91,14 @@ class BAHTSh extends StatelessWidget {
 
         //profile image
 
-        getCircleImage(imageUrl),
-
-        MS24(),
-        SH25(title, AppTheme.colors.blue500, 1),
-        SS16(),
-        //the conditional fields
-
+        // getCircleImage(imageUrl),
         if (s1TrackerC) S1trackerC(),
         if (s1TrackerIC) S1trackerIC(),
         if (s4TrackerC) S4trackerC(),
-        SS36(),
+        MS24(),
+        SH25(title, AppTheme.colors.blue500, 1),
+
+        MS24(),
         BBLM14(subheading, Colors.black, 1)
       ]),
     );
@@ -124,6 +121,7 @@ class BHCTSh extends StatelessWidget {
   final bool s3trackerC;
   final bool s3trackerIC;
   final bool s4trackerIC;
+  final String subheading;
 
   BHCTSh(
       this.backButton,
@@ -137,7 +135,8 @@ class BHCTSh extends StatelessWidget {
       this.s2trackerIC,
       this.s3trackerC,
       this.s3trackerIC,
-      this.s4trackerIC);
+      this.s4trackerIC,
+      this.subheading);
 
   @override
   Widget build(BuildContext context) {
@@ -147,9 +146,6 @@ class BHCTSh extends StatelessWidget {
         LS64(),
         if (backButton) CBButton(),
         SS16(),
-        BTM36(title, titleColor, 1),
-        SH18(caption, captionColor, 1),
-        SS16(),
         if (s1trackerC) S1trackerC(),
         if (s1trackerIC) S1trackerIC(),
         if (s2trackerC) S2trackerC(),
@@ -158,7 +154,10 @@ class BHCTSh extends StatelessWidget {
         if (s3trackerIC) S3trackerIC(),
         if (s4trackerIC) S4trackerIC(),
         SS16(),
-        BBLM14('Subheading', Colors.black, 1),
+        BTM36(title, titleColor, 1),
+        SH18(caption, captionColor, 1),
+        MS24(),
+        BBLM14(subheading, Colors.black, 1),
       ]),
     );
   }

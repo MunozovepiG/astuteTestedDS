@@ -4,11 +4,13 @@ import 'package:my_t_components/page/page2.dart';
 import 'package:my_t_components/styles/buttons.dart';
 import 'package:my_t_components/styles/components.dart';
 import 'package:my_t_components/styles/fonts.dart';
+import 'package:my_t_components/styles/headings.dart';
 import 'package:my_t_components/styles/pop-up.dart';
 import 'package:my_t_components/styles/selections.dart';
 import 'package:my_t_components/styles/spaces.dart';
 import 'package:my_t_components/styles/textformfields.dart';
 import 'package:my_t_components/styles/theme.dart';
+import 'package:my_t_components/styles/tips.dart';
 import 'package:my_t_components/styles/tracker.dart';
 
 void main() {
@@ -97,29 +99,20 @@ class _MyHomePageState extends State<MyHomePage> {
                       // horizontal).
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        CBButton(),
-                        //the text input fields
-
-                        MS32(),
-
-                        CustomDropdown(
-                          values: ['Option 1', 'Option 2'],
-                          preselectedValue: 'Option 1',
-                          onChanged: (value) {},
-                          iconColor: AppTheme.colors.green800,
-                          borderColor: AppTheme.colors.green800,
-                          labelText: 'sample',
-                          disabled: true,
-                          backgroundColor: AppTheme.colors.grey400,
-                        ),
-
-                        MyDropdown(
-                            values: ['Option 1', 'Option 2'],
-                            preselectedValue: 'Option 1',
-                            onChanged: (value) {},
-                            iconColor: Colors.green,
-                            borderColor: Colors.orange,
-                            labelText: 'sample')
+                        GeneralTip(
+                            heading: 'What is a starter fund',
+                            decsription: 'Yass sexy queen',
+                            icon: Icons.class_rounded),
+                        SS36(),
+                        TipsWAction(
+                            textButton: 'Set up focus',
+                            onPressed: () {
+                              print('Example');
+                            },
+                            heading: 'What is a starter fund',
+                            decsription:
+                                'You do not have a focus at the moment. Please click below to setup a new financial priority.',
+                            icon: Icons.class_rounded)
                       ],
                     ),
                   ],

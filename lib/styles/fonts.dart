@@ -107,6 +107,24 @@ class SH12 extends StatelessWidget {
   }
 }
 
+//body
+class BBL16 extends StatelessWidget {
+  @override
+  final String title;
+  final Color? color;
+  final int maxLines;
+  BBL16(this.title, this.color, this.maxLines);
+
+  Widget build(BuildContext context) {
+    return AutoSizeText(title,
+        maxLines: maxLines,
+        style: GoogleFonts.montserrat(
+            fontSize: 16,
+            fontWeight: FontWeight.w600,
+            color: color ?? Colors.black));
+  }
+}
+
 //body text
 
 class BBLM14 extends StatelessWidget {

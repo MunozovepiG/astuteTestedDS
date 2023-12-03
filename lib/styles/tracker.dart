@@ -11,15 +11,15 @@ class S1trackerIC extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width * 0.61,
+      width: 254,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           //item 1 - the first step
 
           Container(
-            width: MediaQuery.of(context).size.width * 0.142,
-            height: 24,
+            width: 58.65,
+            height: 25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -38,8 +38,8 @@ class S1trackerIC extends StatelessWidget {
           //item 2 - the second step
 
           Container(
-            width: MediaQuery.of(context).size.width * 0.142,
-            height: 24,
+            width: 58.65,
+            height: 25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -57,8 +57,8 @@ class S1trackerIC extends StatelessWidget {
           //item 3 - the third step
 
           Container(
-            width: MediaQuery.of(context).size.width * 0.142,
-            height: 24,
+            width: 58.65,
+            height: 25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -76,8 +76,8 @@ class S1trackerIC extends StatelessWidget {
           //item 4 - the fourth step
 
           Container(
-            width: MediaQuery.of(context).size.width * 0.142,
-            height: 24,
+            width: 58.65,
+            height: 25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -103,31 +103,31 @@ class S1trackerC extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width * 0.61,
+      width: 254,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           //item 1 - the first step
 
           Container(
-            width: MediaQuery.of(context).size.width * 0.142,
-            height: 24,
+            width: 58.65,
+            height: 25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  width: MediaQuery.of(context).size.height * 0.028,
-                  height: MediaQuery.of(context).size.height * 0.028,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: AppTheme.colors.blue500,
+                  width: 25,
+                  height: 25,
+                  decoration: ShapeDecoration(
+                    color: Color(0xFFFDFAF5),
+                    shape: OvalBorder(
+                      side: BorderSide(width: 0.25, color: Color(0xFF3E63D3)),
+                    ),
                   ),
                   child: Center(
-                      child: Icon(
-                    Icons.check,
-                    size: MediaQuery.of(context).size.height * 0.02,
-                    color: Colors.white,
-                  )),
+                      child: Icon(Icons.check,
+                          size: MediaQuery.of(context).size.height * 0.02,
+                          color: AppTheme.colors.blue500)),
                 )
               ],
             ),
@@ -136,8 +136,8 @@ class S1trackerC extends StatelessWidget {
           //item 2 - the second step
 
           Container(
-            width: MediaQuery.of(context).size.width * 0.142,
-            height: 24,
+            width: 58.65,
+            height: 25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -155,8 +155,8 @@ class S1trackerC extends StatelessWidget {
           //item 3 - the third step
 
           Container(
-            width: MediaQuery.of(context).size.width * 0.142,
-            height: 24,
+            width: 58.65,
+            height: 25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -174,8 +174,8 @@ class S1trackerC extends StatelessWidget {
           //item 4 - the fourth step
 
           Container(
-            width: MediaQuery.of(context).size.width * 0.142,
-            height: 24,
+            width: 58.65,
+            height: 25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -201,34 +201,40 @@ class S2trackerIC extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width * 0.61,
+      width: 254,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           //item 1 - the first step
 
           Container(
-            width: MediaQuery.of(context).size.width * 0.142,
-            height: 24,
+            width: 58.65,
+            height: 25,
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                //BB10('step 1', Colors.black, 1),
                 Container(
-                  height: 6,
-                  decoration: BoxDecoration(
-                    color: AppTheme.colors.grey400,
+                  width: 25,
+                  height: 25,
+                  decoration: ShapeDecoration(
+                    color: Color(0xFFFDFAF5),
+                    shape: OvalBorder(
+                      side: BorderSide(width: 0.25, color: Color(0xFF3E63D3)),
+                    ),
                   ),
+                  child: Center(
+                      child: Icon(Icons.check,
+                          size: MediaQuery.of(context).size.height * 0.02,
+                          color: AppTheme.colors.blue500)),
                 )
               ],
             ),
           ),
-
           //item 2 - the second step
 
           Container(
-            width: MediaQuery.of(context).size.width * 0.142,
-            height: 24,
+            width: 58.65,
+            height: 25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -247,8 +253,8 @@ class S2trackerIC extends StatelessWidget {
           //item 3 - the third step
 
           Container(
-            width: MediaQuery.of(context).size.width * 0.142,
-            height: 24,
+            width: 58.65,
+            height: 25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -266,8 +272,8 @@ class S2trackerIC extends StatelessWidget {
           //item 4 - the fourth step
 
           Container(
-            width: MediaQuery.of(context).size.width * 0.142,
-            height: 24,
+            width: 58.65,
+            height: 25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -293,30 +299,30 @@ class S2trackerC extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width * 0.61,
+      width: 254,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           //item 1 - the first step
           Container(
-            width: MediaQuery.of(context).size.width * 0.142,
-            height: 24,
+            width: 58.65,
+            height: 25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  width: MediaQuery.of(context).size.height * 0.028,
-                  height: MediaQuery.of(context).size.height * 0.028,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: AppTheme.colors.blue500,
+                  width: 25,
+                  height: 25,
+                  decoration: ShapeDecoration(
+                    color: Color(0xFFFDFAF5),
+                    shape: OvalBorder(
+                      side: BorderSide(width: 0.25, color: Color(0xFF3E63D3)),
+                    ),
                   ),
                   child: Center(
-                      child: Icon(
-                    Icons.check,
-                    size: MediaQuery.of(context).size.height * 0.02,
-                    color: Colors.white,
-                  )),
+                      child: Icon(Icons.check,
+                          size: MediaQuery.of(context).size.height * 0.02,
+                          color: AppTheme.colors.blue500)),
                 )
               ],
             ),
@@ -325,14 +331,14 @@ class S2trackerC extends StatelessWidget {
           //item 2 - the second step
 
           Container(
-            width: MediaQuery.of(context).size.width * 0.142,
-            height: 24,
+            width: 58.65,
+            height: 25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  width: MediaQuery.of(context).size.height * 0.028,
-                  height: MediaQuery.of(context).size.height * 0.028,
+                  width: 25,
+                  height: 25,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: AppTheme.colors.blue500,
@@ -351,8 +357,8 @@ class S2trackerC extends StatelessWidget {
           //item 3 - the third step
 
           Container(
-            width: MediaQuery.of(context).size.width * 0.142,
-            height: 24,
+            width: 58.65,
+            height: 25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -370,8 +376,8 @@ class S2trackerC extends StatelessWidget {
           //item 4 - the fourth step
 
           Container(
-            width: MediaQuery.of(context).size.width * 0.142,
-            height: 24,
+            width: 58.65,
+            height: 25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -396,30 +402,30 @@ class S3trackerIC extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width * 0.61,
+      width: 254,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           //item 1 - the first step
           Container(
-            width: MediaQuery.of(context).size.width * 0.142,
-            height: 24,
+            width: 58.65,
+            height: 25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  width: MediaQuery.of(context).size.height * 0.028,
-                  height: MediaQuery.of(context).size.height * 0.028,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: AppTheme.colors.blue500,
+                  width: 25,
+                  height: 25,
+                  decoration: ShapeDecoration(
+                    color: Color(0xFFFDFAF5),
+                    shape: OvalBorder(
+                      side: BorderSide(width: 0.25, color: Color(0xFF3E63D3)),
+                    ),
                   ),
                   child: Center(
-                      child: Icon(
-                    Icons.check,
-                    size: MediaQuery.of(context).size.height * 0.02,
-                    color: Colors.white,
-                  )),
+                      child: Icon(Icons.check,
+                          size: MediaQuery.of(context).size.height * 0.02,
+                          color: AppTheme.colors.blue500)),
                 )
               ],
             ),
@@ -428,24 +434,24 @@ class S3trackerIC extends StatelessWidget {
           //item 2 - the second step
 
           Container(
-            width: MediaQuery.of(context).size.width * 0.142,
-            height: 24,
+            width: 58.65,
+            height: 25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  width: MediaQuery.of(context).size.height * 0.028,
-                  height: MediaQuery.of(context).size.height * 0.028,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: AppTheme.colors.blue500,
+                  width: 25,
+                  height: 25,
+                  decoration: ShapeDecoration(
+                    color: Color(0xFFFDFAF5),
+                    shape: OvalBorder(
+                      side: BorderSide(width: 0.25, color: Color(0xFF3E63D3)),
+                    ),
                   ),
                   child: Center(
-                      child: Icon(
-                    Icons.check,
-                    size: MediaQuery.of(context).size.height * 0.02,
-                    color: Colors.white,
-                  )),
+                      child: Icon(Icons.check,
+                          size: MediaQuery.of(context).size.height * 0.02,
+                          color: AppTheme.colors.blue500)),
                 )
               ],
             ),
@@ -453,8 +459,8 @@ class S3trackerIC extends StatelessWidget {
           //item 3 - the third step
 
           Container(
-            width: MediaQuery.of(context).size.width * 0.142,
-            height: 24,
+            width: 58.65,
+            height: 25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -473,8 +479,8 @@ class S3trackerIC extends StatelessWidget {
           //item 4 - the fourth step
 
           Container(
-            width: MediaQuery.of(context).size.width * 0.142,
-            height: 24,
+            width: 58.65,
+            height: 25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -499,30 +505,30 @@ class S3trackerC extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width * 0.61,
+      width: 254,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           //item 1 - the first step
           Container(
-            width: MediaQuery.of(context).size.width * 0.142,
-            height: 24,
+            width: 58.65,
+            height: 25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  width: MediaQuery.of(context).size.height * 0.028,
-                  height: MediaQuery.of(context).size.height * 0.028,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: AppTheme.colors.blue500,
+                  width: 25,
+                  height: 25,
+                  decoration: ShapeDecoration(
+                    color: Color(0xFFFDFAF5),
+                    shape: OvalBorder(
+                      side: BorderSide(width: 0.25, color: Color(0xFF3E63D3)),
+                    ),
                   ),
                   child: Center(
-                      child: Icon(
-                    Icons.check,
-                    size: MediaQuery.of(context).size.height * 0.02,
-                    color: Colors.white,
-                  )),
+                      child: Icon(Icons.check,
+                          size: MediaQuery.of(context).size.height * 0.02,
+                          color: AppTheme.colors.blue500)),
                 )
               ],
             ),
@@ -531,24 +537,24 @@ class S3trackerC extends StatelessWidget {
           //item 2 - the second step
 
           Container(
-            width: MediaQuery.of(context).size.width * 0.142,
-            height: 24,
+            width: 58.65,
+            height: 25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  width: MediaQuery.of(context).size.height * 0.028,
-                  height: MediaQuery.of(context).size.height * 0.028,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: AppTheme.colors.blue500,
+                  width: 25,
+                  height: 25,
+                  decoration: ShapeDecoration(
+                    color: Color(0xFFFDFAF5),
+                    shape: OvalBorder(
+                      side: BorderSide(width: 0.25, color: Color(0xFF3E63D3)),
+                    ),
                   ),
                   child: Center(
-                      child: Icon(
-                    Icons.check,
-                    size: MediaQuery.of(context).size.height * 0.02,
-                    color: Colors.white,
-                  )),
+                      child: Icon(Icons.check,
+                          size: MediaQuery.of(context).size.height * 0.02,
+                          color: AppTheme.colors.blue500)),
                 )
               ],
             ),
@@ -557,24 +563,24 @@ class S3trackerC extends StatelessWidget {
           //item 3 - the third step
 
           Container(
-            width: MediaQuery.of(context).size.width * 0.142,
-            height: 24,
+            width: 58.65,
+            height: 25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  width: MediaQuery.of(context).size.height * 0.028,
-                  height: MediaQuery.of(context).size.height * 0.028,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: AppTheme.colors.blue500,
+                  width: 25,
+                  height: 25,
+                  decoration: ShapeDecoration(
+                    color: Color(0xFFFDFAF5),
+                    shape: OvalBorder(
+                      side: BorderSide(width: 0.25, color: Color(0xFF3E63D3)),
+                    ),
                   ),
                   child: Center(
-                      child: Icon(
-                    Icons.check,
-                    size: MediaQuery.of(context).size.height * 0.02,
-                    color: Colors.white,
-                  )),
+                      child: Icon(Icons.check,
+                          size: MediaQuery.of(context).size.height * 0.02,
+                          color: AppTheme.colors.blue500)),
                 )
               ],
             ),
@@ -582,8 +588,8 @@ class S3trackerC extends StatelessWidget {
           //item 4 - the fourth step
 
           Container(
-            width: MediaQuery.of(context).size.width * 0.142,
-            height: 24,
+            width: 58.65,
+            height: 25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -610,30 +616,30 @@ class S4trackerIC extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width * 0.61,
+      width: 254,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           //item 1 - the first step
           Container(
-            width: MediaQuery.of(context).size.width * 0.142,
-            height: 24,
+            width: 58.65,
+            height: 25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  width: MediaQuery.of(context).size.height * 0.028,
-                  height: MediaQuery.of(context).size.height * 0.028,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: AppTheme.colors.blue500,
+                  width: 25,
+                  height: 25,
+                  decoration: ShapeDecoration(
+                    color: Color(0xFFFDFAF5),
+                    shape: OvalBorder(
+                      side: BorderSide(width: 0.25, color: Color(0xFF3E63D3)),
+                    ),
                   ),
                   child: Center(
-                      child: Icon(
-                    Icons.check,
-                    size: MediaQuery.of(context).size.height * 0.02,
-                    color: Colors.white,
-                  )),
+                      child: Icon(Icons.check,
+                          size: MediaQuery.of(context).size.height * 0.02,
+                          color: AppTheme.colors.blue500)),
                 )
               ],
             ),
@@ -642,24 +648,24 @@ class S4trackerIC extends StatelessWidget {
           //item 2 - the second step
 
           Container(
-            width: MediaQuery.of(context).size.width * 0.142,
-            height: 24,
+            width: 58.65,
+            height: 25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  width: MediaQuery.of(context).size.height * 0.028,
-                  height: MediaQuery.of(context).size.height * 0.028,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: AppTheme.colors.blue500,
+                  width: 25,
+                  height: 25,
+                  decoration: ShapeDecoration(
+                    color: Color(0xFFFDFAF5),
+                    shape: OvalBorder(
+                      side: BorderSide(width: 0.25, color: Color(0xFF3E63D3)),
+                    ),
                   ),
                   child: Center(
-                      child: Icon(
-                    Icons.check,
-                    size: MediaQuery.of(context).size.height * 0.02,
-                    color: Colors.white,
-                  )),
+                      child: Icon(Icons.check,
+                          size: MediaQuery.of(context).size.height * 0.02,
+                          color: AppTheme.colors.blue500)),
                 )
               ],
             ),
@@ -668,24 +674,24 @@ class S4trackerIC extends StatelessWidget {
           //item 3 - the third step
 
           Container(
-            width: MediaQuery.of(context).size.width * 0.142,
-            height: 24,
+            width: 58.65,
+            height: 25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  width: MediaQuery.of(context).size.height * 0.028,
-                  height: MediaQuery.of(context).size.height * 0.028,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: AppTheme.colors.blue500,
+                  width: 25,
+                  height: 25,
+                  decoration: ShapeDecoration(
+                    color: Color(0xFFFDFAF5),
+                    shape: OvalBorder(
+                      side: BorderSide(width: 0.25, color: Color(0xFF3E63D3)),
+                    ),
                   ),
                   child: Center(
-                      child: Icon(
-                    Icons.check,
-                    size: MediaQuery.of(context).size.height * 0.02,
-                    color: Colors.white,
-                  )),
+                      child: Icon(Icons.check,
+                          size: MediaQuery.of(context).size.height * 0.02,
+                          color: AppTheme.colors.blue500)),
                 )
               ],
             ),
@@ -694,8 +700,8 @@ class S4trackerIC extends StatelessWidget {
           //item 4 - the final step
 
           Container(
-            width: MediaQuery.of(context).size.width * 0.142,
-            height: 24,
+            width: 58.65,
+            height: 25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -722,30 +728,30 @@ class S4trackerC extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width * 0.61,
+      width: 254,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           //item 1 - the first step
           Container(
-            width: MediaQuery.of(context).size.width * 0.142,
-            height: 24,
+            width: 58.65,
+            height: 25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  width: MediaQuery.of(context).size.height * 0.028,
-                  height: MediaQuery.of(context).size.height * 0.028,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: AppTheme.colors.blue500,
+                  width: 25,
+                  height: 25,
+                  decoration: ShapeDecoration(
+                    color: Color(0xFFFDFAF5),
+                    shape: OvalBorder(
+                      side: BorderSide(width: 0.25, color: Color(0xFF3E63D3)),
+                    ),
                   ),
                   child: Center(
-                      child: Icon(
-                    Icons.check,
-                    size: MediaQuery.of(context).size.height * 0.02,
-                    color: Colors.white,
-                  )),
+                      child: Icon(Icons.check,
+                          size: MediaQuery.of(context).size.height * 0.02,
+                          color: AppTheme.colors.blue500)),
                 )
               ],
             ),
@@ -754,24 +760,24 @@ class S4trackerC extends StatelessWidget {
           //item 2 - the second step
 
           Container(
-            width: MediaQuery.of(context).size.width * 0.142,
-            height: 24,
+            width: 58.65,
+            height: 25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  width: MediaQuery.of(context).size.height * 0.028,
-                  height: MediaQuery.of(context).size.height * 0.028,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: AppTheme.colors.blue500,
+                  width: 25,
+                  height: 25,
+                  decoration: ShapeDecoration(
+                    color: Color(0xFFFDFAF5),
+                    shape: OvalBorder(
+                      side: BorderSide(width: 0.25, color: Color(0xFF3E63D3)),
+                    ),
                   ),
                   child: Center(
-                      child: Icon(
-                    Icons.check,
-                    size: MediaQuery.of(context).size.height * 0.02,
-                    color: Colors.white,
-                  )),
+                      child: Icon(Icons.check,
+                          size: MediaQuery.of(context).size.height * 0.02,
+                          color: AppTheme.colors.blue500)),
                 )
               ],
             ),
@@ -780,24 +786,24 @@ class S4trackerC extends StatelessWidget {
           //item 3 - the third step
 
           Container(
-            width: MediaQuery.of(context).size.width * 0.142,
-            height: 24,
+            width: 58.65,
+            height: 25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  width: MediaQuery.of(context).size.height * 0.028,
-                  height: MediaQuery.of(context).size.height * 0.028,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: AppTheme.colors.blue500,
+                  width: 25,
+                  height: 25,
+                  decoration: ShapeDecoration(
+                    color: Color(0xFFFDFAF5),
+                    shape: OvalBorder(
+                      side: BorderSide(width: 0.25, color: Color(0xFF3E63D3)),
+                    ),
                   ),
                   child: Center(
-                      child: Icon(
-                    Icons.check,
-                    size: MediaQuery.of(context).size.height * 0.02,
-                    color: Colors.white,
-                  )),
+                      child: Icon(Icons.check,
+                          size: MediaQuery.of(context).size.height * 0.02,
+                          color: AppTheme.colors.blue500)),
                 )
               ],
             ),
@@ -805,24 +811,24 @@ class S4trackerC extends StatelessWidget {
           //item 4 - the fourth step
 
           Container(
-            width: MediaQuery.of(context).size.width * 0.142,
-            height: 24,
+            width: 58.65,
+            height: 25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  width: MediaQuery.of(context).size.height * 0.028,
-                  height: MediaQuery.of(context).size.height * 0.028,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: AppTheme.colors.blue500,
+                  width: 25,
+                  height: 25,
+                  decoration: ShapeDecoration(
+                    color: Color(0xFFFDFAF5),
+                    shape: OvalBorder(
+                      side: BorderSide(width: 0.25, color: Color(0xFF3E63D3)),
+                    ),
                   ),
                   child: Center(
-                      child: Icon(
-                    Icons.check,
-                    size: MediaQuery.of(context).size.height * 0.02,
-                    color: Colors.white,
-                  )),
+                      child: Icon(Icons.check,
+                          size: MediaQuery.of(context).size.height * 0.02,
+                          color: AppTheme.colors.blue500)),
                 )
               ],
             ),
